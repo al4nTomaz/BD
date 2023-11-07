@@ -1,0 +1,23 @@
+-- 1
+SELECT email FROM cliente WHERE primeiro_nome LIKE "Maria";
+
+-- 2
+SELECT titulo FROM filme WHERE recursos_especiais LIKE "Trailer%"
+
+-- 3
+SELECT titulo FROM filme WHERE duracao_do_filme >= 120;
+
+-- 4
+SELECT * FROM categoria ORDER by nome;
+
+-- 5
+SELECT COUNT(*) FROM filme WHERE ano_de_lancamento=2006;
+
+-- 6
+SELECT COUNT(*) FROM filme WHERE month(ultima_atualizacao)=02 AND YEAR(ultima_atualizacao)=2006;
+
+-- 7
+SELECT primeiro_nome FROM cliente WHERE cliente_id BETWEEN 1 AND 50;
+
+-- 8
+SELECT COUNT(*) FROM pagamento WHERE valor > (SELECT AVG(valor) FROM pagamento);
